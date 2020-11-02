@@ -1,0 +1,84 @@
+*  {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background: rgb(60, 119, 119);
+    font-size: 17px;
+  }
+
+  .albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    grid-gap: 40px;
+    padding: 40px;
+  }
+
+  .album {
+    background: rgba(255, 255, 255, 0.52);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-gap: 20px;
+  }
+
+  .album__artwork {
+    width: 100px;
+    height: 100px;
+    /* align-self: center; */
+  }
+
+
+
+  .album__details {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding-left: 20px;
+  }
+
+  h2{
+    font-size: medium;
+    padding: 0 0 0 0;
+    margin: 0 0 7px 0;
+    /* align-self: flex-end; */
+    }
+
+  p {
+    margin: 0 0 15px 0;
+    font-size: smaller;
+  }
+  .album__artist{
+    font-weight: 800;
+    font-size: normal;
+    color: rgba(0, 0, 0, 0.787)
+  }
+
+  .album__desc{
+    font-size: xx-small;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+
+
+  @media screen and (max-width: 1600px) {
+    .albums {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+
+  @media screen and (max-width: 1200px) {
+    .albums {
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+  @media screen and (max-width: 700px) {
+    .albums {
+      grid-template-columns: 1fr ;
+    }
+  }
